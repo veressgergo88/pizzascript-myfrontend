@@ -4,156 +4,159 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@500&display=swap" rel="stylesheet">
     <script type="module" src="/src/main.ts" defer></script>
     <title>PizzaScript</title>
   </head>
-  <body class="w-screen h-screen bg-gradient-to-t from-orange-400 to-sky-400">
+  <body class="w-screen  bg-gradient-to-t from-orange-400 to-sky-400 bg-no-repeat">
 
-    <main id="main-box" class="mx-auto sm:w-3/5 flex flex-col bg-white">
+    <div id="main-box" class="w-4/5 mx-auto flex flex-col">
       
-      <header id="team-name" class="w-full bg-yellow-200 flex flex-col justify-center items-center gap-3">
+      <div id="team-name" class="flex flex-col justify-center items-center gap-2 py-2">
         <h1 class="text-6xl">PizzaScript</h1>
         <p class="italic">We Coding What You Order!</p>
-      </header>
+      </div>
     
-      <section id="pizza-section" class="grid grid-cols-3 w-full bg-slate-600">
+      <div id="pizza-section" class="flex flex-wrap">
         
-        <article class="flex">
-          <div id="left-side">
-            <img id="imgone" src="img/marinara.png" alt="mariana">
-          </div>
-          <div id="right-side">
-            <div id="name-tops-price">
-              <h3 id="pizza-name-1">Meatball Marinara</h3>
-              <p id="pizza-toppings-1">Onions, Herbs, Tomato Sauce Drizzle, Tomato Sauce, Mozzarella Cheese, Extra Pork Meatballs</p>
-              <p id="pizza-price-1">3990 <span>Ft</span></p>
-              <div id="amount-box">
-                <input id="inpone" type="number">
+        <div class="w-full lg:w-1/2 p-4">
+          <div class="flex items-center">
+            <div class="w-1/2">
+              <img src="img/marinara.webp" alt="marianara" class="max-w-full h-auto">
+            </div>
+            <div class="w-1/2 pl-4">
+              <h3>Meatball Marianara</h3>
+              <p>Onions, Herbs, Tomato Sauce Drizzle, Tomato Sauce, Mozzarella Cheese, Extra Pork Meatballs</p>
+              <p>3990<span> Ft</span></p>
+              <div>
+                <input id="amountone" type="number" placeholder="0">
               </div>
-              <div id="add-to-order-box">
-                <button id="add-to-order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ADD TO ORDER</button>
+              <div>
+                <button type="submit" id="order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ADD TO ORDER</button>
               </div>
             </div>
           </div>
-        </article>
+        </div>
 
-        <article class="flex">
-          <div id="left-side">
-            <img id="imgtwo" src="img/banger.png" alt="banger">
-          </div>
-          <div id="right-side">
-            <div id="name-tops-price">
-              <h3 id="pizza-name-2">Absolute Banger</h3>
-              <p id="pizza-toppings-2">Pepperoni, Sausage, Chorizo Sausage, Hotdog Slices, Tomato Sauce, Mozzarella Cheese</p>
-              <p id="pizza-price-2">3890 <span>Ft</span></p>
-              <div id="amount-box">
-                <input id="inptwo" type="number">
+        <div class="w-full lg:w-1/2 p-4">
+          <div class="flex items-center">
+            <div class="w-1/2">
+              <img src="img/banger.webp" alt="banger" class="max-w-full h-auto">
+            </div>
+            <div class="w-1/2 pl-4">
+              <h3>Absolute Banger</h3>
+              <p>Pepperoni, Sausage, Chorizo Sausage, Hotdog Slices, Tomato Sauce, Mozzarella Cheese</p>
+              <p>3890<span> Ft</span></p>
+              <div>
+                <input id="amounttwo" type="number" placeholder="0">
               </div>
-              <div id="add-to-order-box">
-                <button id="add-to-order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ADD TO ORDER</button>
+              <div>
+                <button type="submit" id="order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ADD TO ORDER</button>
               </div>
             </div>
           </div>
-        </article>
+        </div>
 
-        <article class="flex">
-          <div id="left-side">
-            <img id="imgthree" src="img/cheeseburger.png" alt="cheeseburger">
-          </div>
-          <div id="right-side">
-            <div id="name-tops-price">
-              <h3 id="pizza-name-3">The Cheeseburger</h3>
-              <p id="pizza-toppings-3">Onions, Tomatoes, Burger Sauce, Sliced Gherkins, Tomato Sauce, Mozzarella Cheese, Extra Ground Beef</p>
-              <p id="pizza-price-3">3950 <span>Ft</span></p>
-              <div id="amount-box">
-                <input id="inpthree" type="number">
+        <div class="w-full lg:w-1/2 p-4">
+          <div class="flex items-center">
+            <div class="w-1/2">
+              <img src="img/cheeseburger.webp" alt="cheeseburger" class="max-w-full h-auto">
+            </div>
+            <div class="w-1/2 pl-4">
+              <h3>The Cheeseburger</h3>
+              <p>Onions, Tomatoes, Burger Sauce, Sliced Gherkins, Tomato Sauce, Mozzarella Cheese, Extra Ground Beef</p>
+              <p>3950<span> Ft</span></p>
+              <div>
+                <input id="amountthree" type="number" placeholder="0">
               </div>
-              <div id="add-to-order-box">
-                <button id="add-to-order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ADD TO ORDER</button>
+              <div>
+                <button type="submit" id="order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ADD TO ORDER</button>
               </div>
             </div>
           </div>
-        </article>
+        </div>
 
-        <article class="flex">
-          <div id="left-side">
-            <img id="imgfour" src="img/meatfielder.png" alt="meatfielder">
-          </div>
-          <div id="right-side">
-            <div id="name-tops-price">
-              <h3 id="pizza-name-4">The Meatfielder</h3>
-              <p id="pizza-toppings-4">Pepperoni, Ham, Smoked Bacon Rashers, Pork Meatballs, Chorizo Sausage, Tomato Sauce, Mozzarella Cheese</p>
-              <p id="pizza-price-4">3890 <span>Ft</span></p>
-              <div id="amount-box">
-                <input id="inpfour" type="number">
+        <div class="w-full lg:w-1/2 p-4">
+          <div class="flex items-center">
+            <div class="w-1/2">
+              <img src="img/meatfielder.webp" alt="meatfielder" class="max-w-full h-auto">
+            </div>
+            <div class="w-1/2 pl-4">
+              <h3>The Meatfilder</h3>
+              <p>Pepperoni, Ham, Smoked Bacon Rashers, Pork Meatballs, Chorizo Sausage, Tomato Sauce, Mozzarella Cheese</p>
+              <p>3890<span> Ft</span></p>
+              <div>
+                <input id="amountfour" type="number" placeholder="0">
               </div>
-              <div id="add-to-order-box">
-                <button id="add-to-order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ADD TO ORDER</button>
+              <div>
+                <button type="submit" id="order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ADD TO ORDER</button>
               </div>
             </div>
           </div>
-        </article>
+        </div>
 
-        <article class="flex">
-          <div id="left-side">
-            <img id="imgfive" src="img/supreme.png" alt="supreme">
-          </div>
-          <div id="right-side">
-            <div id="name-tops-price">
-              <h3 id="pizza-name-5">Vegi Supreme</h3>
-              <p id="pizza-toppings-5">Sweetcorn, Mushrooms, Onions, Green and Red Peppers, Tomatoes, Tomato Sauce, Mozzarella Cheese</p>
-              <p id="pizza-price-5">3790 <span>Ft</span></p>
-              <div id="amount-box">
-                <input id="inpfive" type="number">
+        <div class="w-full lg:w-1/2 p-4">
+          <div class="flex items-center">
+            <div class="w-1/2">
+              <img src="img/supreme.webp" alt="supreme" class="max-w-full h-auto">
+            </div>
+            <div class="w-1/2 pl-4">
+              <h3>Vegi Supreme</h3>
+              <p>Sweetcorn, Mushrooms, Onions, Green and Red Peppers, Tomatoes, Tomato Sauce, Mozzarella Cheese</p>
+              <p>3790<span> Ft</span></p>
+              <div>
+                <input id="amountfive" type="number" placeholder="0">
               </div>
-              <div id="add-to-order-box">
-                <button id="add-to-order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ADD TO ORDER</button>
+              <div>
+                <button type="submit" id="order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ADD TO ORDER</button>
               </div>
             </div>
           </div>
-        </article>
+        </div>
 
-        <article class="flex">
-          <div id="left-side">
-            <img id="imgsix" src="img/passion.png" alt="passion">
-          </div>
-          <div id="right-side">
-            <div id="name-tops-price">
-              <h3 id="pizza-name-6">Pepperoni Passion</h3>
-              <p id="pizza-toppings-6">Tomato Sauce, Extra Pepperoni, Extra Mozzarella Cheese</p>
-              <p id="pizza-price-6">3990 <span>Ft</span></p>
-              <div id="amount-box">
-                <input id="inpsix" type="number">
+        <div class="w-full lg:w-1/2 p-4">
+          <div class="flex items-center">
+            <div class="w-1/2">
+              <img src="img/passion.webp" alt="passion" class="max-w-full h-auto">
+            </div>
+            <div class="w-1/2 pl-4">
+              <h3>Pepperoni Passion</h3>
+              <p>Tomato Sauce, Extra Pepperoni, Extra Mozzarella Cheese</p>
+              <p>3990<span> Ft</span></p>
+              <div>
+                <input id="amountsix" type="number" placeholder="0">
               </div>
-              <div id="add-to-order-box">
-                <button id="add-to-order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ADD TO ORDER</button>
+              <div>
+                <button type="submit" id="order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ADD TO ORDER</button>
               </div>
             </div>
           </div>
-        </article>
+        </div>
 
-        <article class="flex">
-          <div id="left-side">
-            <img id="imgseven" src="img/bbq.png" alt="bbq">
-          </div>
-          <div id="right-side">
-            <div id="name-tops-price">
-              <h3 id="pizza-name-7">Texas BBQ</h3>
-              <p id="pizza-toppings-7">Chicken Breast Strips, Onions, Smoked Bacon Rashers, Green and Red Peppers, BBQ Sauce, Mozzarella Cheese</p>
-              <p id="pizza-price-7">3690 <span>Ft</span></p>
-              <div id="amount-box">
-                <input id="inpseven" type="number">
+        <div class="w-full lg:w-1/2 p-4">
+          <div class="flex items-center">
+            <div class="w-1/2">
+              <img src="img/bbq.webp" alt="bbq" class="max-w-full h-auto">
+            </div>
+            <div class="w-1/2 pl-4">
+              <h3>Texas BBQ</h3>
+              <p>Chicken Breast Strips, Onions, Smoked Bacon Rashers, Green and Red Peppers, BBQ Sauce, Mozzarella Cheese</p>
+              <p>3690<span> Ft</span></p>
+              <div>
+                <input id="amountseven" type="number" placeholder="0">
               </div>
-              <div id="add-to-order-box">
-                <button id="add-to-order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ADD TO ORDER</button>
+              <div>
+                <button type="submit" id="order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ADD TO ORDER</button>
               </div>
             </div>
           </div>
-        </article>
-      
-      </section>
+        </div>
 
-      <form id="form-section" class="mx-auto bg-yellow-200">
+      </div>
+
+      <form id="form-section" class="mx-auto mt-10">
         
         <div id="form-name" class="flex flex-col">
           <label class="tracking-wide text-gray-700 text-lg font-bold mb-2">
@@ -169,7 +172,7 @@
               ZIP CODE
             </label>
             <div>
-              <input type="text" placeholder="1108" class="w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+              <input id="inpzip" type="text" placeholder="1108" class="w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
             </div>
           </div>
           <div class="flex flex-col">
@@ -177,7 +180,7 @@
               CITY
             </label>
             <div>
-              <input type="text" placeholder="Budapest" class="w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+              <input id="inpcity" type="text" placeholder="Budapest" class="w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
             </div>
           </div>
           <div class="flex flex-col">
@@ -185,7 +188,7 @@
               STREET
             </label>
             <div>
-              <input type="text" placeholder="Móricz Zsigmond utca" class="w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+              <input id="inpstreet" type="text" placeholder="Móricz Zsigmond utca" class="w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
             </div>
           </div>
           <div class="flex flex-col">
@@ -193,7 +196,7 @@
               HOUSE NUMBER
             </label>
             <div>
-              <input type="text" placeholder="102" class="w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+              <input id="inphouse" type="text" placeholder="102" class="w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
             </div>
           </div>
         </div>
@@ -202,24 +205,42 @@
             <label class="tracking-wide text-gray-700 text-lg font-bold mb-2">
               E-MAIL
             </label>
-            <input id="e-mail" type="email" placeholder="john.wick@gmail.com" class="w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+            <input id="inpemail" id="e-mail" type="email" placeholder="john.wick@gmail.com" class="w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
           </div>
           <div class="flex flex-col">
             <label class="tracking-wide text-gray-700 text-lg font-bold mb-2">
               PHONE NUMBER
             </label>
-            <input id="phone-number" type="text" placeholder="+36105551117" class="w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+            <input id="inpphone" type="text" placeholder="+36105551117" class="w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
           </div>
         </div>
         
-        <div id="orderbutton-box" class="text-center bg-neutral-600">
-          <button type="submit" id="order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ORDER</button>
-        </div>
-
       </form>
       
+      <div id="orderbutton-box" class="text-center my-5">
+        <button type="submit" id="regist" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">REGIST</button>
+      </div>
 
-    </main>
+      <div id="ordercheck" style="display: none;" class="flex justify-center gap-3 bg-blue-400">
+        <div>
+          <h2>NAME:</h>
+          <h2>ADDRESS:</h>
+          <h2>E-MAIL:</h>
+          <h2>PHONE NUMBER:</h>
+        </div>
+        <div>
+          <h2 id="outname"></h>
+          <h2 id="outaddress"></h>
+          <h2 id="outemail"></h>
+          <h2 id="outphone"></h>
+        </div>
+      </div>
+      
+      <div id="orderbutton-box" class="text-center">
+        <button type="submit" id="order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ORDER</button>
+      </div>
+    
+    </div>
     
   </body>
   </html>
