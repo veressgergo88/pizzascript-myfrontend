@@ -11,16 +11,16 @@
     <title>PizzaScript</title>
   </head>
   <body class="w-screen  bg-gradient-to-t from-orange-400 to-sky-400 bg-no-repeat">
-
+  <!--Main-Box ---------------------------------------------->
     <div id="main-box" class="w-4/5 mx-auto flex flex-col">
-      
+      <!--Team name ----------------------------------------->
       <div id="team-name" class="flex flex-col justify-center items-center gap-2 py-2">
         <h1 class="text-6xl">PizzaScript</h1>
         <p class="italic">We Coding What You Order!</p>
       </div>
-    
+      <!--Pizza list ----------------------------------------->
       <div id="pizza-section" class="flex flex-wrap">
-        
+        <!--First pizza-->
         <div class="w-full lg:w-1/2 p-4">
           <div class="flex items-center">
             <div class="w-1/2">
@@ -28,136 +28,114 @@
             </div>
             <div class="w-1/2 pl-4">
               <h3 id="pizzaone">Meatball Marianara</h3>
-              <p>Onions, Herbs, Tomato Sauce Drizzle, Tomato Sauce, Mozzarella Cheese, Extra Pork Meatballs</p>
-              <p id="pizza">3990<span> Ft</span></p>
+              <p id="pizzaonetoppings">Onions, Herbs, Tomato Sauce Drizzle, Tomato Sauce, Mozzarella Cheese, Extra Pork Meatballs</p>
+              <p id="pizzaoneprice">3990<span> Ft</span></p>
               <div>
                 <input id="amountone" type="number" placeholder="0">
-              </div>
-              <div>
-                <button type="submit" id="order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ADD TO ORDER</button>
               </div>
             </div>
           </div>
         </div>
-
+        <!--Second pizza-->
         <div class="w-full lg:w-1/2 p-4">
           <div class="flex items-center">
             <div class="w-1/2">
               <img src="img/banger.webp" alt="banger" class="max-w-full h-auto">
             </div>
             <div class="w-1/2 pl-4">
-              <h3>Absolute Banger</h3>
-              <p>Pepperoni, Sausage, Chorizo Sausage, Hotdog Slices, Tomato Sauce, Mozzarella Cheese</p>
-              <p>3890<span> Ft</span></p>
+              <h3 id="pizzatwo">Absolute Banger</h3>
+              <p id="pizzatwotoppings">Pepperoni, Sausage, Chorizo Sausage, Hotdog Slices, Tomato Sauce, Mozzarella Cheese</p>
+              <p id="pizzatwoprice">3890<span> Ft</span></p>
               <div>
                 <input id="amounttwo" type="number" placeholder="0">
-              </div>
-              <div>
-                <button type="submit" id="order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ADD TO ORDER</button>
               </div>
             </div>
           </div>
         </div>
-
+        <!--Third pizza-->
         <div class="w-full lg:w-1/2 p-4">
           <div class="flex items-center">
             <div class="w-1/2">
               <img src="img/cheeseburger.webp" alt="cheeseburger" class="max-w-full h-auto">
             </div>
             <div class="w-1/2 pl-4">
-              <h3>The Cheeseburger</h3>
-              <p>Onions, Tomatoes, Burger Sauce, Sliced Gherkins, Tomato Sauce, Mozzarella Cheese, Extra Ground Beef</p>
-              <p>3950<span> Ft</span></p>
+              <h3 id="pizzathree">The Cheeseburger</h3>
+              <p id="pizzathreetoppings">Onions, Tomatoes, Burger Sauce, Sliced Gherkins, Tomato Sauce, Mozzarella Cheese, Extra Ground Beef</p>
+              <p id="pizzathreeprice">3950<span> Ft</span></p>
               <div>
                 <input id="amountthree" type="number" placeholder="0">
-              </div>
-              <div>
-                <button type="submit" id="order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ADD TO ORDER</button>
               </div>
             </div>
           </div>
         </div>
-
+        <!--Fourth pizza-->
         <div class="w-full lg:w-1/2 p-4">
           <div class="flex items-center">
             <div class="w-1/2">
               <img src="img/meatfielder.webp" alt="meatfielder" class="max-w-full h-auto">
             </div>
             <div class="w-1/2 pl-4">
-              <h3>The Meatfilder</h3>
-              <p>Pepperoni, Ham, Smoked Bacon Rashers, Pork Meatballs, Chorizo Sausage, Tomato Sauce, Mozzarella Cheese</p>
-              <p>3890<span> Ft</span></p>
+              <h3 id="pizzafour">The Meatfilder</h3>
+              <p id="pizzafourtoppings">Pepperoni, Ham, Smoked Bacon Rashers, Pork Meatballs, Chorizo Sausage, Tomato Sauce, Mozzarella Cheese</p>
+              <p id="pizzafourprice">3890<span> Ft</span></p>
               <div>
                 <input id="amountfour" type="number" placeholder="0">
-              </div>
-              <div>
-                <button type="submit" id="order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ADD TO ORDER</button>
               </div>
             </div>
           </div>
         </div>
-
+        <!--Fifth pizza-->
         <div class="w-full lg:w-1/2 p-4">
           <div class="flex items-center">
             <div class="w-1/2">
               <img src="img/supreme.webp" alt="supreme" class="max-w-full h-auto">
             </div>
             <div class="w-1/2 pl-4">
-              <h3>Vegi Supreme</h3>
-              <p>Sweetcorn, Mushrooms, Onions, Green and Red Peppers, Tomatoes, Tomato Sauce, Mozzarella Cheese</p>
-              <p>3790<span> Ft</span></p>
+              <h3 id="pizzafive">Vegi Supreme</h3>
+              <p id="pizzafivetoppings">Sweetcorn, Mushrooms, Onions, Green and Red Peppers, Tomatoes, Tomato Sauce, Mozzarella Cheese</p>
+              <p id="pizzafiveprice">3790<span> Ft</span></p>
               <div>
                 <input id="amountfive" type="number" placeholder="0">
-              </div>
-              <div>
-                <button type="submit" id="order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ADD TO ORDER</button>
               </div>
             </div>
           </div>
         </div>
-
+        <!--Sixth pizza-->
         <div class="w-full lg:w-1/2 p-4">
           <div class="flex items-center">
             <div class="w-1/2">
               <img src="img/passion.webp" alt="passion" class="max-w-full h-auto">
             </div>
             <div class="w-1/2 pl-4">
-              <h3>Pepperoni Passion</h3>
-              <p>Tomato Sauce, Extra Pepperoni, Extra Mozzarella Cheese</p>
-              <p>3990<span> Ft</span></p>
+              <h3 id="pizzasix">Pepperoni Passion</h3>
+              <p id="pizzasixtoppings">Tomato Sauce, Extra Pepperoni, Extra Mozzarella Cheese</p>
+              <p id="pizzasixprice">3990<span> Ft</span></p>
               <div>
                 <input id="amountsix" type="number" placeholder="0">
-              </div>
-              <div>
-                <button type="submit" id="order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ADD TO ORDER</button>
               </div>
             </div>
           </div>
         </div>
-
+        <!--Seventh pizza --> 
         <div class="w-full lg:w-1/2 p-4">
           <div class="flex items-center">
             <div class="w-1/2">
               <img src="img/bbq.webp" alt="bbq" class="max-w-full h-auto">
             </div>
             <div class="w-1/2 pl-4">
-              <h3>Texas BBQ</h3>
-              <p>Chicken Breast Strips, Onions, Smoked Bacon Rashers, Green and Red Peppers, BBQ Sauce, Mozzarella Cheese</p>
-              <p>3690<span> Ft</span></p>
+              <h3 id="pizzaseven">Texas BBQ</h3>
+              <p id="pizzaseventoppings">Chicken Breast Strips, Onions, Smoked Bacon Rashers, Green and Red Peppers, BBQ Sauce, Mozzarella Cheese</p>
+              <p id="pizzasevenprice">3690<span> Ft</span></p>
               <div>
                 <input id="amountseven" type="number" placeholder="0">
-              </div>
-              <div>
-                <button type="submit" id="order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ADD TO ORDER</button>
               </div>
             </div>
           </div>
         </div>
-
       </div>
-
-      <form id="form-section" class="mx-auto mt-10">
-        
+      <!--Form -------------------------------------------->
+      <form id="formsection" class="mx-auto mt-10">
+        <!--Form Name ------------------------------------->
         <div id="form-name" class="flex flex-col">
           <label class="tracking-wide text-gray-700 text-lg font-bold mb-2">
             NAME
@@ -166,7 +144,9 @@
             <input id="inpname" type="text" placeholder="John Wick" class=" bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
           </div>  
         </div>
+        <!--Form Address --------------------------------->
         <div id="form-address" class="flex gap-3">
+          <!--Zipcode ----------------------------------->
           <div class="flex flex-col">
             <label class="tracking-wide text-gray-700 text-lg font-bold mb-2">
               ZIP CODE
@@ -175,6 +155,7 @@
               <input id="inpzip" type="text" placeholder="1108" class="w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
             </div>
           </div>
+          <!-- City ------------------------------------->
           <div class="flex flex-col">
             <label class="tracking-wide text-gray-700 text-lg font-bold mb-2">
               CITY
@@ -183,6 +164,7 @@
               <input id="inpcity" type="text" placeholder="Budapest" class="w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
             </div>
           </div>
+          <!-- Street --------------------------------------->
           <div class="flex flex-col">
             <label class="tracking-wide text-gray-700 text-lg font-bold mb-2">
               STREET
@@ -191,6 +173,7 @@
               <input id="inpstreet" type="text" placeholder="Móricz Zsigmond utca" class="w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
             </div>
           </div>
+          <!-- House Number --------------------------------->
           <div class="flex flex-col">
             <label class="tracking-wide text-gray-700 text-lg font-bold mb-2">
               HOUSE NUMBER
@@ -200,13 +183,16 @@
             </div>
           </div>
         </div>
+        <!-- Form Contact ------------------------------------->
         <div id="form-contact" class="flex gap-3">
+          <!-- E-mail ----------------------------------------->
           <div class="flex flex-col">
             <label class="tracking-wide text-gray-700 text-lg font-bold mb-2">
               E-MAIL
             </label>
             <input id="inpemail" id="e-mail" type="email" placeholder="john.wick@gmail.com" class="w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
           </div>
+          <!-- Phone Number ----------------------------------->
           <div class="flex flex-col">
             <label class="tracking-wide text-gray-700 text-lg font-bold mb-2">
               PHONE NUMBER
@@ -214,32 +200,40 @@
             <input id="inpphone" type="text" placeholder="+36105551117" class="w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
           </div>
         </div>
-        
       </form>
-      
-      <div id="orderbutton-box" class="text-center my-5">
-        <button type="submit" id="regist" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">REGIST</button>
+      <!-- Add to Order Button ---------------------------------->
+      <div class="text-center my-5">
+        <button type="submit" id="addtoorder" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ADD TO ORDER</button>
       </div>
-
-      <div id="ordercheck" style="display: none;" class="flex justify-center gap-3 bg-blue-400">
-        <div>
-          <h2>NAME:</h>
-          <h2>ADDRESS:</h>
-          <h2>E-MAIL:</h>
-          <h2>PHONE NUMBER:</h>
+      <!-- Order Check Section ---------------------------------->
+      <div id="ordercheck" style="display: none;" class="bg-blue-400">
+        <div class="flex justify-center gap-3">
+          <div>
+            <h2>NAME:</h>
+            <h2>ADDRESS:</h>
+            <h2>E-MAIL:</h>
+            <h2>PHONE NUMBER:</h>
+          </div>
+          <div>
+            <h2 id="outname"></h>
+            <h2 id="outaddress"></h>
+            <h2 id="outemail"></h>
+            <h2 id="outphone"></h>
+          </div>
         </div>
-        <div>
-          <h2 id="outname"></h>
-          <h2 id="outaddress"></h>
-          <h2 id="outemail"></h>
-          <h2 id="outphone"></h>
-        </div>
-        <div id="pizzaorder">
+        <!-- Pizza Order-->
+        <div id="pizzaorder" class="flex justify-center gap-4">
+          <div id="pizzaordername">
+          </div>
+          <div id="pizzaorderpiece">
+          </div>
+          <div id="pizzaorderprice">
+          </div>
         </div>
       </div>
-      
+      <!-- Order Button ---------------------------------------->
       <div id="orderbutton-box" class="text-center">
-        <button type="submit" id="order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ORDER</button>
+        <button type="submit" style="display:none" id="order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ORDER</button>
       </div>
     
     </div>
