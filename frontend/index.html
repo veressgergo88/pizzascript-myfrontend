@@ -10,7 +10,7 @@
     <script type="module" src="/src/main.ts" defer></script>
     <title>PizzaScript</title>
   </head>
-  <body class="w-screen  bg-gradient-to-t from-orange-400 to-sky-400 bg-no-repeat">
+  <body class="w-full  bg-gradient-to-t from-orange-400 to-sky-400 bg-no-repeat">
   <!--Main-Box ---------------------------------------------->
     <div id="main-box" class="w-4/5 mx-auto flex flex-col">
       <!--Team name ----------------------------------------->
@@ -34,7 +34,7 @@
                 <p class="font-bold pl-2">Ft</p>
               </div>  
               <div>
-                <input id="amountone" type="number" placeholder="0">
+                <input id="amountone" type="number" min="0" placeholder="0">
               </div>
             </div>
           </div>
@@ -53,7 +53,7 @@
                 <p class="font-bold pl-2">Ft</p>
               </div>  
               <div>
-                <input id="amounttwo" type="number" placeholder="0">
+                <input id="amounttwo" type="number" min="0" placeholder="0">
               </div>
             </div>
           </div>
@@ -72,7 +72,7 @@
                 <p class="font-bold pl-2">Ft</p>
               </div>  
               <div>
-                <input id="amountthree" type="number" placeholder="0">
+                <input id="amountthree" type="number" min="0" placeholder="0">
               </div>
             </div>
           </div>
@@ -91,7 +91,7 @@
                 <p class="font-bold pl-2">Ft</p>
               </div>  
               <div>
-                <input id="amountfour" type="number" placeholder="0">
+                <input id="amountfour" type="number" min="0" placeholder="0">
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@
                 <p class="font-bold pl-2">Ft</p>
               </div>  
               <div>
-                <input id="amountfive" type="number" placeholder="0">
+                <input id="amountfive" type="number" min="0" placeholder="0">
               </div>
             </div>
           </div>
@@ -129,7 +129,7 @@
                 <p class="font-bold pl-2">Ft</p>
               </div>  
               <div>
-                <input id="amountsix" type="number" placeholder="0">
+                <input id="amountsix" type="number" min="0" placeholder="0">
               </div>
             </div>
           </div>
@@ -148,7 +148,7 @@
                 <p class="font-bold pl-2">Ft</p>
               </div>  
               <div>
-                <input id="amountseven" type="number" placeholder="0">
+                <input id="amountseven" type="number" min="0" placeholder="0">
               </div>
             </div>
           </div>
@@ -162,8 +162,8 @@
             NAME
           </label>
           <div>
-            <input id="inpname" type="text" placeholder="John Wick" class=" bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
-          </div>  
+            <input id="name" type="text" placeholder="John Wick" required pattern="[A-Za-z ]+" title="Please enter letters and spaces only" class=" bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+          </div> 
         </div>
         <!--Form Address --------------------------------->
         <div id="form-address" class="flex gap-3">
@@ -173,8 +173,8 @@
               ZIP CODE
             </label>
             <div>
-              <input id="inpzip" type="text" placeholder="1108" class="w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
-            </div>
+              <input id="zipcode" type="text" placeholder="1108" required pattern="[0-9]+" title="Please enter numbers only" class="w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+            </div> 
           </div>
           <!-- City ------------------------------------->
           <div class="flex flex-col">
@@ -182,8 +182,8 @@
               CITY
             </label>
             <div>
-              <input id="inpcity" type="text" placeholder="Budapest" class="w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
-            </div>
+              <input id="city" type="text" placeholder="Budapest" required pattern="[A-Za-z ]+" title="Please enter letters and spaces only" class="w-full bg-gray-200 text-gray-700 borde rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+            </div> 
           </div>
           <!-- Street --------------------------------------->
           <div class="flex flex-col">
@@ -191,8 +191,8 @@
               STREET
             </label>
             <div>
-              <input id="inpstreet" type="text" placeholder="Móricz Zsigmond utca" class="w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
-            </div>
+              <input id="street" type="text" placeholder="Móricz Zsigmond utca" required pattern="[A-Za-z ]+" title="Please enter letters and spaces only" class="w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+            </div> 
           </div>
           <!-- House Number --------------------------------->
           <div class="flex flex-col">
@@ -200,7 +200,7 @@
               HOUSE NUMBER
             </label>
             <div>
-              <input id="inphouse" type="text" placeholder="102" class="w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+              <input id="house" type="text" placeholder="102" required pattern="[0-9]+" title="Please enter numbers only" class="w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
             </div>
           </div>
         </div>
@@ -211,14 +211,18 @@
             <label class="tracking-wide text-gray-700 text-lg font-bold mb-2">
               E-MAIL
             </label>
-            <input id="inpemail" id="e-mail" type="email" placeholder="john.wick@gmail.com" class="w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+            <div>
+              <input id="email" id="email" type="email" placeholder="john.wick@gmail.com" required class="w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+            </div>  
           </div>
           <!-- Phone Number ----------------------------------->
           <div class="flex flex-col">
             <label class="tracking-wide text-gray-700 text-lg font-bold mb-2">
               PHONE NUMBER
             </label>
-            <input id="inpphone" type="text" placeholder="+36105551117" class="w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+            <div>
+              <input id="phone" type="text" placeholder="+36105551117" required pattern="[0-9+]+" title="Please enter numbers and + only"  class="w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white">
+            </div>  
           </div>
         </div>
       </form>
@@ -227,8 +231,8 @@
         <button type="submit" id="addtoorder" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ADD TO ORDER</button>
       </div>
       <!-- Order Check Section ---------------------------------->
-      <div id="ordercheck" style="display: none;" class="bg-blue-400">
-        <div class="flex justify-center items-center gap-8 py-2">
+      <div id="ordercheck" style="display: none;" class="flex flex-col bg-white bg-opacity-20 rounded-lg">
+        <div class="flex justify-center gap-6 py-2">
           <div>
             <h2>NAME:</h>
             <h2>ADDRESS:</h>
@@ -251,9 +255,16 @@
           <div id="pizzaorderprice">
           </div>
         </div>
+        <div class="flex justify-center gap-6 py-4">
+          <div >
+            <h2>TOTAL PRICE:</h2>
+          </div>
+          <div id="totalprice">
+          </div>
+        </div>
       </div>
       <!-- Order Button ---------------------------------------->
-      <div id="orderbutton-box" class="text-center">
+      <div id="orderbutton-box" class="text-center my-4">
         <button type="submit" style="display:none" id="order" class="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">ORDER</button>
       </div>
     
