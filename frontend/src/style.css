@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-h1, h3 {
+h1, h3, h2 {
   font-family: 'Teko', sans-serif;
 }
 
-h3 {
+h3, h2 {
   font-size: 2rem;
 }
 

@@ -32,6 +32,13 @@ const customerStreet = document.getElementById("inpstreet")! as HTMLInputElement
 const customerHouseNumber = document.getElementById("inphouse")! as HTMLInputElement
 const customerEmail = document.getElementById("inpemail")! as HTMLInputElement
 const customerPhoneNumber = document.getElementById("inpphone")! as HTMLInputElement
+const pizzaOneName = document.getElementById("pizzaone")! as HTMLHeadingElement
+const pizzaTwoName = document.getElementById("pizzatwo")! as HTMLHeadingElement
+const pizzaThreeName = document.getElementById("pizzathree")! as HTMLHeadingElement
+const pizzaFourName = document.getElementById("pizzafour")! as HTMLHeadingElement
+const pizzaFiveName = document.getElementById("pizzafive")! as HTMLHeadingElement
+const pizzaSixName = document.getElementById("pizzasix")! as HTMLHeadingElement
+const pizzaSevenName = document.getElementById("pizzaseven")! as HTMLHeadingElement
 const pizzaOneCount = document.getElementById("amountone")! as HTMLInputElement
 const pizzaTwoCount = document.getElementById("amounttwo")! as HTMLInputElement
 const pizzaThreeCount = document.getElementById("amountthree")! as HTMLInputElement
@@ -39,91 +46,92 @@ const pizzaFourCount = document.getElementById("amountfour")! as HTMLInputElemen
 const pizzaFiveCount = document.getElementById("amountfive")! as HTMLInputElement
 const pizzaSixCount = document.getElementById("amountsix")! as HTMLInputElement
 const pizzaSevenCount = document.getElementById("amountseven")! as HTMLInputElement
-const pizzaOnePrice = document.getElementById("pizzaoneprice")!
-const pizzaTwoPrice = document.getElementById("pizzatwoprice")!
-const pizzaThreePrice = document.getElementById("pizzathreeprice")!
-const pizzaFourPrice = document.getElementById("pizzafourprice")!
-const pizzaFivePrice = document.getElementById("pizzafiveprice")!
-const pizzaSixPrice = document.getElementById("pizzasixprice")!
-const pizzaSevenPrice = document.getElementById("pizzasevenprice")!
+const pizzaOnePrice = document.getElementById("pizzaoneprice")! as HTMLElement
+const pizzaTwoPrice = document.getElementById("pizzatwoprice")! as HTMLElement
+const pizzaThreePrice = document.getElementById("pizzathreeprice")! as HTMLElement
+const pizzaFourPrice = document.getElementById("pizzafourprice")! as HTMLElement
+const pizzaFivePrice = document.getElementById("pizzafiveprice")! as HTMLElement
+const pizzaSixPrice = document.getElementById("pizzasixprice")! as HTMLElement
+const pizzaSevenPrice = document.getElementById("pizzasevenprice")! as HTMLElement
 
-type Order = {
-    customer: string, 
-    zipcode: number, 
-    city: string, 
-    street:string, 
-    house: number, 
-    email: string, 
-    phone:string,
-    pizza: [{
-        pizzaname : string, 
-        piece : number, 
-        price : number, 
-    }]
-} 
+type Customer = {
+    name: string,
+    zipcode: string,
+    city: string,
+    street: string,
+    house: string,
+    email: string,
+    phone: string
+}
 
+type Pizza = {
+    name: string;
+    piece: string;
+    price: string;
+};
 
+document.getElementById("addtoorder")!.addEventListener("click", () => {
+    const customerData: Customer = {
+        name : customerName.value, 
+        zipcode : customerZipCode.value, 
+        city : customerCity.value, 
+        street : customerStreet.value,
+        house : customerHouseNumber.value,
+        email : customerEmail.value,
+        phone : customerPhoneNumber.value
+    }
+    
+    document.getElementById("outname")!.textContent = customerData.name
+    document.getElementById("outaddress")!.textContent = customerData.zipcode + " " + customerData.city + " " + customerData.street + " " + customerData.house
+    document.getElementById("outemail")!.textContent = customerData.email
+    document.getElementById("outphone")!.textContent = customerData.phone
 
+    const pizzaOrder: Pizza[] = [
+        { name: pizzaOneName.textContent!, piece: pizzaOneCount.value, price: pizzaOnePrice.textContent!},
+        { name: pizzaTwoName.textContent!, piece: pizzaTwoCount.value, price: pizzaTwoPrice.textContent!},
+        { name: pizzaThreeName.textContent!, piece: pizzaThreeCount.value, price: pizzaThreePrice.textContent!},
+        { name: pizzaFourName.textContent!, piece: pizzaFourCount.value, price: pizzaFourPrice.textContent!},
+        { name: pizzaFiveName.textContent!, piece: pizzaFiveCount.value, price: pizzaFivePrice.textContent!},
+        { name: pizzaSixName.textContent!, piece: pizzaSixCount.value, price: pizzaSixPrice.textContent!},
+        { name: pizzaSevenName.textContent!, piece: pizzaSevenCount.value, price: pizzaSevenPrice.textContent!},
+    ];
 
-document.getElementById("addtoorder")!.addEventListener("click", ():Order[] => {
-    let theOrder:Order[] = []
-    let customerData = [customerName.value, customerZipCode.value, customerCity.value, customerStreet.value, customerHouseNumber.value, customerEmail.value, customerPhoneNumber.value]
-    let pizzaData = []
+    let amountArray: number[] = []
 
-    document.getElementById("outname")!.textContent = customerData[0]
-    document.getElementById("outaddress")!.textContent = customerData[1] + " " + customerData[2] + " " + customerData[3] + " " + customerData[4]
-    document.getElementById("outemail")!.textContent = customerData[5]
-    document.getElementById("outphone")!.textContent = customerData[6]
+    pizzaOrder.forEach((pizzaData) => {
+        const count = parseInt(pizzaData.piece);
+        if (count > 0) {
+            const nameElement = document.createElement("h2");
+            nameElement.textContent = pizzaData.name;
+            document.getElementById("pizzaordername")!.appendChild(nameElement);
+    
+            const pieceElement = document.createElement("h2");
+            pieceElement.textContent = pizzaData.piece;
+            document.getElementById("pizzaorderpiece")!.appendChild(pieceElement);
+    
+            const priceElement = document.createElement("h2");
+            priceElement.textContent = pizzaData.price + " Ft";
+            document.getElementById("pizzaorderprice")!.appendChild(priceElement);
+            
+            amountArray.push(parseInt(pizzaData.price))
+        }
+    });
 
-    if(parseInt(pizzaOneCount.value) > 0){
-        const pizzaOne = document.createElement("h2");
-        pizzaOne.id = "orderedpizzaone";
-        document.getElementById("pizzaorder")!.appendChild(pizzaOne);
-        document.getElementById("orderedpizzaone")!.innerText = document.getElementById("pizzaone")!.textContent + ": " + pizzaOneCount.value 
+    function sumAmountArray(numbers: number[]): number {
+        let sum = 0;
+        for (const num of numbers) {
+          sum += num;
+        }
+        return sum;
     }
-    if(parseInt(pizzaTwoCount.value) > 0){
-        const pizzaTwo = document.createElement("h2");
-        pizzaTwo.id = "orderedpizzatwo";
-        document.getElementById("pizzaorder")!.appendChild(pizzaTwo);
-        document.getElementById("orderedpizzatwo")!.innerText = document.getElementById("pizzatwo")!.textContent + ": " + pizzaTwoCount.value
-    }
-    if(parseInt(pizzaThreeCount.value) > 0){
-        const pizzaThree = document.createElement("h2");
-        pizzaThree.id = "orderedpizzathree";
-        document.getElementById("pizzaorder")!.appendChild(pizzaThree);
-        document.getElementById("orderedpizzathree")!.innerText = document.getElementById("pizzathree")!.textContent + ": " + pizzaThreeCount.value
-    }
-    if(parseInt(pizzaFourCount.value) > 0){
-        const pizzaFour = document.createElement("h2");
-        pizzaFour.id = "orderedpizzafour";
-        document.getElementById("pizzaorder")!.appendChild(pizzaFour);
-        document.getElementById("orderedpizzafour")!.innerText = document.getElementById("pizzafour")!.textContent + ": " + pizzaFourCount.value
-    }
-    if(parseInt(pizzaFiveCount.value) > 0){
-        const pizzaFive = document.createElement("h2");
-        pizzaFive.id = "orderedpizzafive";
-        document.getElementById("pizzaorder")!.appendChild(pizzaFive);
-        document.getElementById("orderedpizzafive")!.innerText = document.getElementById("pizzafive")!.textContent + ": " + pizzaFiveCount.value
-    }
-    if(parseInt(pizzaSixCount.value) > 0){
-        const pizzaSix = document.createElement("h2");
-        pizzaSix.id = "orderedpizzasix";
-        document.getElementById("pizzaorder")!.appendChild(pizzaSix);
-        document.getElementById("orderedpizzasix")!.innerText = document.getElementById("pizzasix")!.textContent + ": " + pizzaSixCount.value
-    }
-    if(parseInt(pizzaSevenCount.value) > 0){
-        const pizzaSeven = document.createElement("h2");
-        pizzaSeven.id = "orderedpizzaseven";
-        document.getElementById("pizzaorder")!.appendChild(pizzaSeven);
-        document.getElementById("orderedpizzaseven")!.innerText = document.getElementById("pizzaseven")!.textContent + ": " + pizzaSevenCount.value
-    }
+
+    const priceSum = sumAmountArray(amountArray)
 
     const orderCheck = document.getElementById("ordercheck")!
     orderCheck.removeAttribute("style")
 
-    
-
-    return theOrder
+    const orderButton = document.getElementById("order")!
+    orderButton.removeAttribute("style")
 })
 
 /*
